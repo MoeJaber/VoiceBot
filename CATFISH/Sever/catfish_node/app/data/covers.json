@@ -1,0 +1,11 @@
+{
+  "rocket_league": "../images/gamecovers/RL.jpg",
+  "csgo": "../images/gamecovers/CSGO.jpg",
+  "h1z1": "../images/gamecovers/H1Z1.jpg",
+  "lol": "../images/gamecovers/LOL.jpg",
+  "ow": "../images/gamecovers/OW.jpg",
+  "rbs": "../images/gamecovers/RBS.jpg",
+  "wild": "../images/gamecovers/WILD.jpg",
+  "fortnite": "../images/gamecovers/Fortnite.jpg",
+  "othergames": "../images/gamecovers/othergames.jpg"
+}

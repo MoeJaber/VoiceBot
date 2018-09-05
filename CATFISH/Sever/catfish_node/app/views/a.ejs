@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <% include partials/template/head.ejs %>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+
+      #header {
+        background: #ff0;
+        padding: 10px;
+      }
+
+      .header-dark {
+        padding: 10px;
+        padding-bottom: 800px;
+        /* Height of the footer */
+      }
+
+      #containers {
+        min-height: 100%;
+        position: relative;
+        background-color: #313131;
+      }
+
+      .footer-dark {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 300px;
+        /* Height of the footer */
+      }
+    </style>
+</head>
+
+
+<body>
+  <% include partials/template/header.ejs %>
+
+
+    <div class="containers">
+      <div class="intro"></div>
+      <div class="row photos">
+
+        <% games.forEach(function(item){ %>
+
+          <div class="col-lg-2 col-md-2 col-sm-2 item" style="padding-top: 10px; padding-left: 400px;">
+            <a href="catfishGallery?id=rl">
+                  <img class="img-responsive" src=<%=item%>></a>
+          </div>
+          <% }); %>
+
+      </div>
+    </div>
+    </div>
+    <% include partials/template/footer.ejs %>
+
+      <% include partials/template/jsdefaults.ejs %>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+{
+  "name": "voicebot",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "@google-cloud/speech": "^1.4.0",
+    "common-tags": "^1.7.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "dialogflow": "^0.1.0",
+    "discord.js": "^11.3.2",
+    "discord.js-commando": "^0.9.0",
+    "express": "~4.16.0",
+    "ffmpeg-binaries": "^3.2.2-3",
+    "http-errors": "~1.6.2",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.0",
+    "node-fetch": "^2.1.2",
+    "node-opus": "^0.2.7",
+    "opusscript": "0.0.6",
+    "rimraf": "^2.6.2",
+    "snowboy": "^1.2.0",
+    "sonus": "^0.1.9",
+    "sox-stream": "^2.0.1",
+    "ytdl-core": "^0.20.2"
+  }
+}

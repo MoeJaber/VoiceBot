@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <% include partials/template/head.ejs %>
+    <link rel="stylesheet" href="assets1/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets1/css/Dynamically-Queue-Videos.css">
+    <link rel="stylesheet" href="assets1/css/Filterable-Gallery.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="assets1/css/styles.css">
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+
+      #header {
+        background: #ff0;
+        padding: 10px;
+      }
+
+      .header-dark {
+        padding: 10px;
+        padding-bottom: 800px;
+        /* Height of the footer */
+      }
+
+      #containers {
+        min-height: 100%;
+        position: relative;
+        background-color: #313131;
+      }
+
+      .footer-dark {
+        /* position: absolute; */
+        bottom: 0;
+        width: 100%;
+        height: 300px;
+        /* Height of the footer */
+      }
+    </style>
+</head>
+
+
+<body>
+  <% include partials/template/header.ejs %>
+      <div class="container-fluid">
+          <div class="gallery-pt" style=" width:50%;align-content: center;margin-left: 450px;">
+
+              <div class="row">
+                  <div class="col-md-12 gallery-pt--body">
+                      <div class="item col-sm-4 col-xs-6 col-md-3 col-lg-3" style="padding: 10px;">
+                        <a href="catfishGallery?id=rl"> <img class="img-responsive" src="<%= games.rocket_league%>" </a>
+                      </div>
+                      <div class="item col-sm-4 col-xs-6 col-md-3 col-lg-3" style="padding: 10px;">
+                          <a href="catfishGallery?id=csgo"> <img class="img-responsive" src="<%= games.csgo%>" </a>
+                      </div>
+                      <div class="item col-sm-4 col-xs-6 col-md-3 col-lg-3" style="padding: 10px;">
+                          <a href="catfishGallery?id=lol"> <img class="img-responsive" src="<%= games.lol%>" </a>
+                      </div>
+                      <div class="item col-sm-4 col-xs-6 col-md-3 col-lg-3" style="padding: 10px;">
+                        <a href="catfishGallery?id=ow"> <img class="img-responsive" src="<%= games.ow%>" </a>
+                      </div>
+                      <div class="item col-sm-4 col-xs-6 col-md-3 col-lg-3" style="padding: 10px;">
+                          <a href="catfishGallery?id=rbs"> <img class="img-responsive" src="<%= games.rbs%>" </a>
+                      </div>
+                      <div class="item col-sm-4 col-xs-6 col-md-3 col-lg-3" style="padding: 10px;">
+                          <a href="catfishGallery?id=wild"> <img class="img-responsive" src="<%= games.wild%>" </a>
+                      </div>
+                      <div class="item col-sm-4 col-xs-6 col-md-3 col-lg-3" style="padding: 10px;">
+                          <a href="catfishGallery?id=h1z1"> <img class="img-responsive" src="<%= games.h1z1%>" </a>
+                      </div>
+                  <div class="item col-sm-4 col-xs-6 col-md-3 col-lg-3" style="padding: 10px;">
+                          <a href="catfishGallery?id=fortnite"> <img class="img-responsive" src="<%= games.fortnite%>" </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <% include partials/template/footer.ejs %>
+      </div>
+
+
+            <script src="assets1/js/jquery.min.js"></script>
+            <script src="assets1/bootstrap/js/bootstrap.min.js"></script>
+            <script src="assets1/js/Dynamically-Queue-Videos.js"></script>
+            <script src="assets1/js/Filterable-Gallery.js"></script>
+            <script src="https://www.youtube.com/iframe_api"></script>
+          <% include partials/template/jsdefaults.ejs %>
+
+</body>
+
+
+
+</html>

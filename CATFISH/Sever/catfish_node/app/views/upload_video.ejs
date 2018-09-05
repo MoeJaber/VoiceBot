@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <% include partials/template/head.ejs %>
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans' type='text/css'>
+
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+
+      #header {
+        background: #ff0;
+        padding: 10px;
+      }
+
+      .header-dark {
+        padding: 10px;
+        padding-bottom: 450px;
+
+        /* Height of the footer */
+      }
+
+      #containers {
+        min-height: 100%;
+        position: relative;
+        background-color: #313131;
+      }
+
+      textarea {
+        resize: none;
+      }
+
+    </style>
+</head>
+
+<body>
+  <% include partials/template/header.ejs %>
+  <span id="signinButton" class="pre-sign-in">
+    <span
+      class="g-signin"
+      data-callback="signinCallback"
+      data-clientid="1019106175546-nce73ifkkmio5q5kv8pdfjo9obsamosi.apps.googleusercontent.com"
+      data-cookiepolicy="single_host_origin"
+      data-scope="https://www.googleapis.com/auth/youtube.upload https://www.googleapis.com/auth/youtube">
+    </span>
+  </span>
+
+  <div class="post-sign-in">
+    <div>
+      <img id="channel-thumbnail">
+      <span id="channel-name"></span>
+    </div>
+    <br>
+    <div class="container row col-md-6 col-md-offset-3">
+      <form method="post" action="upload" id="uploadForm" name="uploadForm" enctype="multipart/form-data">
+        <div class="panel panel-default">
+          <div class="panel-heading">Upload Video Form<br><p>Select the title, game, enter a description and submit your video.</p></div>
+          <div class="panel-body">
+            <!--Video Title and Video File -->
+            <div class="col-md-6 form-group">
+              <label class="label-control" for="gameTitle">Video Title</label>
+              <input class="form-control" type="text" name="gameTitle" id="title" placeholder="Video Title"/>
+            </div>
+            <div class="col-md-6 form-group">
+              <label class="label-control" for="file">Video File</label>   
+              <input class="form-control" type="file" id="file" name="file"/> 
+            </div>
+
+            <!--Video Description-->
+            <div class="col-md-12 form-group">
+              <label class="label-control" for="description">Video Description</label>
+              <textarea id="description" name="description" class="form-control"  rows="3" placeholder="Video Descritption"></textarea>
+            </div>
+
+            <!--Select Game-->
+            <div class="col-md-12 form-group">
+              <label class="label-control" for="videoGame">Game</label>
+              <label class="radio-inline"><input type="radio" name="videoGame" value="csgo">CS:GO</label>
+              <label class="radio-inline"><input type="radio" name="videoGame" value="rl">Rocket League</label>
+              <label class="radio-inline"><input type="radio" name="videoGame" value="h1z1">H1Z1</label>
+              <label class="radio-inline"><input type="radio" name="videoGame" value="lol">LOL</label>
+              <label class="radio-inline"><input type="radio" name="videoGame" value="rbs">Rainbow 6</label>
+              <label class="radio-inline"><input type="radio" name="videoGame" value="ow">Overwatch</label>
+              <label class="radio-inline"><input type="radio" name="videoGame" value="wild">Wildlands</label>
+              <label class="radio-inline"><input type="radio" name="videoGame" value="fortnite">Fortnite</label>
+              <label class="radio-inline"><input type="radio" name="videoGame" value="othergames">Other Game</label>
+            </div>  
+
+            <div class="col-md-offset-4 col-md-4">  
+              <button class="btn btn-success form-control" id="button" name="button" type="submit">Upload Video</button>
+            </div>  
+          </div>
+          <div class="during-upload">
+            <p><span id="percent-transferred"></span>% done (<span id="bytes-transferred"></span>/<span id="total-bytes"></span> bytes)</p>
+            <progress id="upload-progress" max="1" value="0"></progress>
+          </div>
+
+          <div class="post-upload">
+            <p>Uploaded video with id <span id="video-id"></span>. Polling for status...</p>
+            <ul id="post-upload-status"></ul>
+            <div id="player"></div>
+          </div>
+          <br>
+          <br>  
+      </form>
+      
+    </div><!--End of container-->
+  </div><!--End of Post-sign in-->
+
+  <% include partials/template/jsdefaults.ejs %>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="//apis.google.com/js/client:plusone.js"></script>
+  <script src="js/cors_upload.js"></script>
+  <script src="js/upload_video.js"></script>
+
+</body>
+</html>
+

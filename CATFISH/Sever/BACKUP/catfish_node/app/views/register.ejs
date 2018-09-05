@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <% include partials/template/head.ejs %>
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+    </style>
+</head>
+
+<body>
+
+  <div class="login-dark" style="height:1300px;">
+    <% if (error) { %>
+      <div class="alert alert-danger">
+        <% messages.forEach(function(msg) { %>
+          <li><strong>Danger!</strong>
+            <%= msg %>
+          </li>
+          <% }); %>
+      </div>
+      <% } %>
+        <form method="post" action="register">
+          <h2 class="sr-only">Login Form</h2>
+          <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
+          <div class="form-group">
+            <input class="form-control" name="username" placeholder="Nickname" Value="">
+          </div>
+          <div class="form-group">
+            <input class="form-control" type="email" name="email" placeholder="E-mail Address" Value="">
+          </div>
+          <div class="form-group">
+            <input class="form-control" type="password" name="password" placeholder="Password">
+          </div>
+          <div class="form-group">
+            <button class="btn btn-primary btn-block" type="submit" name="submit">Register</button>
+          </div>
+          <a class="forgot" href="/"> Log in here.</a>
+        </form>
+  </div>
+
+
+  <% include partials/template/jsdefaults.ejs %>
+</body>
+
+</html>
