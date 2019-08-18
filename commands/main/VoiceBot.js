@@ -15,9 +15,9 @@ const rimraf = require('rimraf');
 var exec = require('child_process').exec;
 
 
-process.env.GOOGLE_APPLICATION_CREDENTIALS="/home/moe/Desktop/VoiceBot/JSON/VoiceBotJSON.json";
+process.env.GOOGLE_APPLICATION_CREDENTIALS="/home/user/xxxx.json";
 
-const apiKey = "AIzaSyBZb6pOfhVqG5TGT6Kw-eVQv2XCg2dzvP8";
+const apiKey = "xxxxxxxxxxxxxxxx";
 
 const request = {
     config: {
